@@ -1,0 +1,60 @@
+{
+  "name": "summer-lemonade",
+  "version": "1.0.0",
+  "description": "Ready to go code for application using ReactJs, LESS, Babel, Eslint, Webpack and Reat hot loader.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/eslint/bin/eslint.js --fix ./src",
+    "pretty": "./node_modules/prettier/bin-prettier.js --single-quote --write \"src/**/*.{js,jsx,json,css,less,scss}\""
+  },
+  "keywords": [
+    "reactjs",
+    "babel",
+    "less",
+    "webpack",
+    "boilerplate code",
+    "eslint"
+  ],
+  "author": "Chandra Shekar Chennamsetty",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "env",
+      "react",
+      "stage-2"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.4",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
+    "file-loader": "^1.1.11",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "prettier": "^1.13.5",
+    "prettier-loader": "^2.1.1",
+    "react-hot-loader": "^4.3.3",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "html-loader": "^0.5.5",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  }
+}

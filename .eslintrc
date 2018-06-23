@@ -1,0 +1,45 @@
+{
+  "extends": ["airbnb-base"],
+  "parser": "babel-eslint",
+  "plugins": [
+    "jsx-a11y",
+    "import",
+    "react"
+  ],
+  "globals": {
+    "document": true
+  },
+  "rules": {
+    "react/jsx-uses-vars": [2],
+    "class-methods-use-this": [0, { "exceptMethods": [ "render" ] }],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never"
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.js",
+          "**/*.spec.js",
+          "**/*.stories.js"
+        ]
+      }
+    ],
+    "import/prefer-default-export": 0,
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": [ "Link" ],
+      "specialLink": [ "to" ],
+      "aspects": [ "noHref", "invalidHref" ]
+    }],
+    "prefer-promise-reject-errors": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prop-types": 0
+  }  
+}
