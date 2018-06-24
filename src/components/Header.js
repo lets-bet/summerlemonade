@@ -1,17 +1,12 @@
-import React from 'react';
 import styles from './Header.less';
-import lemonadeLogoImg from './lemonade-logo.png';
+import lemonadeLogoImg from './common/assets/lemonade-logo.png';
 
-class Header extends React.Component {
-  render() {
-    return (
-      <div>
-        <div className={styles['header-container']}>
-          <img className={styles['main-logo']} src={lemonadeLogoImg} />
-        </div>
-      </div>
-    );
-  }
-}
+const Header = () => (
+  <div>
+    <div className={styles['header-container']}>
+      <img className={styles['main-logo']} src={lemonadeLogoImg} alt="Logo" />
+    </div>
+  </div>
+);
 
 export default Header;

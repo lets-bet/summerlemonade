@@ -2,10 +2,15 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: [
-    './src/index.js'
+    './src'
   ],
   module: {
     rules: [
+      {
+        test: /\.html?$/,
+        use: ["file-loader?name=[name].[ext]"]
+      },
+      
       {
         test: /\.js|jsx$/,
         enforce: 'pre',
@@ -37,14 +42,6 @@ module.exports = {
         ]
       },
       {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
-          }
-        ]
-      },
-      {
         test: /\.(png|jpge?g|gif)$/,
         use: [
             { 
@@ -55,7 +52,7 @@ module.exports = {
               }
             }
         ]
-      }      
+      },      
     ]
   },
   resolve: {
@@ -71,7 +68,7 @@ module.exports = {
     new webpack.ProvidePlugin({
       React: 'react',
       ReactDOM: 'react-dom'
-    })
+    }),
   ],
   devServer: {
     contentBase: './dist',

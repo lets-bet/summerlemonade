@@ -11,7 +11,6 @@
   },
   "rules": {
     "react/jsx-uses-vars": [2],
-    "class-methods-use-this": [0, { "exceptMethods": [ "render" ] }],
     "comma-dangle": [
       "error",
       {
